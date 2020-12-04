@@ -1,34 +1,39 @@
-import React, {useEffect, useState} from "react";
- import axios from "axios"
- import '../App.css'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+import '../App.css'
+import NumberFormat from "react-number-format"
 
-
-
- const Province = () => {
-     const [kasusPosi, setkasusPosi] = useState([]);
-     const [kasusMeni, setkasusMeni] = useState([]);
-     const [kasusSemb, setkasusSemb] = useState([]);
-     useEffect(() => {
-         axios 
-         .get("https://indonesia-covid-19.mathdro.id/api/provinsi")
-         .then((response) =>
-
-         {
-             setkasusPosi(response.data.kasusPosi);
-             setkasusMeni(response.data.kasusMeni);
-             setkasusSemb(response.data.kasusSemb);
-         })
-     }, []);
-
-     return( 
-         <div>
-             <font color="darkgrey"><b>Jumlah kasus seluruh dunia</b></font>
-            <div className = "boxprovince">
-             <h1 className ="boxkasusPosi">Positif {kasusPosi}</h1>
-             <h1 className ="boxkasusMeni">Meninggal {kasusMeni}</h1>
-             <h1 className ="boxkasusSemb">Sembuh {kasusSemb}</h1>
-            </div>
-         </div>
-     )
- }
- export default Province;
+export default function Province (){
+    const [provinceData, getProvince] = useState([]);
+    useEffect(() => {
+        axios
+            .get("https://indonesia-covid-19.mathdro.id/api/provinsi")
+            .then(response => {getProvince(response.data.data)})
+            .catch(err => {console.log(err)})
+    }, []);
+    console.log(provinceData)
+    return(
+        <div align="center">
+            <table border="1" className="table-container">
+                <tr>
+                    <th className="table-value-first">No</th>
+                    <th className="table-value-second">Province</th>
+                    <th className="table-value-third">Sembuh</th>
+                    <th className="table-value-fourth">Perawatan</th>
+                    <th className="table-value-fifth">Meninggal</th>
+                </tr>
+                {provinceData.map((item, index) => {
+                    return(
+                        <tr>
+                            <th className="table-value-first"scope="row" key={item.fid}>{index + 1}</th>
+                            <th className="table-value-second">{item.provinsi}</th>
+                            <th className="table-value-third"><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-value-fourth"><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-value-fifth"><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
+                        </tr>
+                    )
+                })}
+            </table>
+        </div>    
+    )
+}

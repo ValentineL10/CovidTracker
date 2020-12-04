@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
- import axios from "axios"
- import '../App.css'
-import Numberformat from "react-number-format"
+import axios from "axios"
+import '../App.css'
+import NumberFormat from "react-number-format"
 
  const Global = () => {
      const [confirmed, setConfirmed] = useState([]);
@@ -24,13 +24,15 @@ import Numberformat from "react-number-format"
 
         
          <div>
-             <font color="darkgrey"><b>Jumlah kasus seluruh dunia</b></font>
+             
+             <font color="grey"><b>Jumlah kasus seluruh dunia</b></font>
             <div className = "box">
              <h1 className ="boxPerawatan">Positif {confirmed}</h1>
              <h1 className ="boxMeninggal">Meninggal {deaths}</h1>
              <h1 className ="boxSembuh">Sembuh {recovered}</h1>
             </div>
          </div>
+         
      )
  }
  export default Global

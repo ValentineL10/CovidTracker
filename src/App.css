@@ -1,5 +1,11 @@
+body{
+  font-family: 'Open Sans',serif;
+  font-style: inherit;
+  color: rgb(59, 35, 24);
+}
+
 .boxPerawatan{
-  height: 200px;
+  height: 150px;
   width: 200px;
   border-radius: 15px;
   margin-left: 30px;
@@ -14,7 +20,7 @@
     background-color:rgb(247, 177, 47)
 }
 .boxMeninggal{
-  height: 200px;
+  height: 150px;
   width: 200px;
   border-radius: 15px;
   margin-left: 30px;
@@ -30,7 +36,7 @@
 }
 
 .boxSembuh{
-  height: 200px;
+  height: 150px;
   width: 200px;
   border-radius: 15px;
   margin-left: 30px;

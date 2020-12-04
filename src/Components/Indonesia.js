@@ -23,9 +23,9 @@ import React, {useEffect, useState} from "react";
      
         
         <div>
-             <font color="darkgrey"><b>Jumlah kasus seluruh dunia</b></font>
+             <font color="grey"><b>Jumlah kasus seluruh dunia</b></font>
             <div className = "box">
-             <h1 className ="boxPerawatan">Positif {perawatan}</h1>
+             <h1 className ="boxPerawatan"> Positif {perawatan}</h1>
              <h1 className ="boxMeninggal">Meninggal {meninggal}</h1>
              <h1 className ="boxSembuh">Sembuh {sembuh}</h1>
             </div>
