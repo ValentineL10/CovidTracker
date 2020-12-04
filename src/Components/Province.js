@@ -23,7 +23,7 @@ import React, {useEffect, useState} from "react";
      return( 
          <div>
              <font color="darkgrey"><b>Jumlah kasus seluruh dunia</b></font>
-            <div className = "box">
+            <div className = "boxprovince">
              <h1 className ="boxkasusPosi">Positif {kasusPosi}</h1>
              <h1 className ="boxkasusMeni">Meninggal {kasusMeni}</h1>
              <h1 className ="boxkasusSemb">Sembuh {kasusSemb}</h1>

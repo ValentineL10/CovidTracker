@@ -17,9 +17,12 @@ import React, {useEffect, useState} from "react";
              setSembuh(response.data.sembuh);
          })
      }, []);
-     
+
+
      return( 
-         <div>
+     
+        
+        <div>
              <font color="darkgrey"><b>Jumlah kasus seluruh dunia</b></font>
             <div className = "box">
              <h1 className ="boxPerawatan">Positif {perawatan}</h1>
