@@ -3,6 +3,7 @@ import axios from "axios"
 import '../App.css'
 import NumberFormat from "react-number-format"
 
+
  const Global = () => {
      const [confirmed, setConfirmed] = useState([]);
      const [deaths, setDeaths] = useState([]);
@@ -26,12 +27,12 @@ import NumberFormat from "react-number-format"
          <div>
              
              <font color="grey"><b>Jumlah kasus seluruh dunia</b></font>
-            <div className = "box">
+             <br></br>
              <h1 className ="boxPerawatan">Positif {confirmed}</h1>
              <h1 className ="boxMeninggal">Meninggal {deaths}</h1>
              <h1 className ="boxSembuh">Sembuh {recovered}</h1>
             </div>
-         </div>
+     
          
      )
  }
