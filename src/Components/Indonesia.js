@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
  import axios from "axios"
  import '../App.css'
-import NumberFormat from "react-number-format"
+
 
  const Indonesia = () => {
      const [perawatan, setPerawatan] = useState([]);

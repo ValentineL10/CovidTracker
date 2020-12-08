@@ -44,3 +44,33 @@
     font-weight: bold;
     background-color:rgb(135, 219, 39)
 }
+.table-nomor{
+  height: 10px;
+  width: 10px;
+  margin-left: 30px;
+  background-color: rgba(255, 230, 0, 0.637)
+}
+.table-provinsi{
+  height: 30px;
+  width: 30px;
+  margin-left: 30px;
+  background-color: rgba(255, 115, 0, 0.938)
+}
+.table-sembuh{
+  height: 10px;
+  width: 10px;
+  margin-left: 30px;
+  background-color: rgb(135, 219, 39)
+}
+.table-perawatan{
+  height: 10px;
+  width: 10px;
+  margin-left: 30px;
+  background-color: rgb(247, 177, 47)
+}
+.table-meninggal{
+  height: 10px;
+  width: 10px;
+  margin-left: 30px;
+  background-color: rgba(221, 21, 21, 0.904)
+}

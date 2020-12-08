@@ -14,22 +14,22 @@ export default function Province (){
     console.log(provinceData)
     return(
         <div align="center">
-            <table border="1" className="table-container">
+            <table border="1" className="tabel-dasar">
                 <tr>
-                    <th className="table-value-first">No</th>
-                    <th className="table-value-second">Province</th>
-                    <th className="table-value-third">Sembuh</th>
-                    <th className="table-value-fourth">Perawatan</th>
-                    <th className="table-value-fifth">Meninggal</th>
+                    <th className="table-nomor">No</th>
+                    <th className="table-provinsi">Province</th>
+                    <th className="table-sembuh">Sembuh</th>
+                    <th className="table-perawatan">Perawatan</th>
+                    <th className="table-meninggal">Meninggal</th>
                 </tr>
                 {provinceData.map((item, index) => {
                     return(
                         <tr>
-                            <th className="table-value-first"scope="row" key={item.fid}>{index + 1}</th>
-                            <th className="table-value-second">{item.provinsi}</th>
-                            <th className="table-value-third"><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
-                            <th className="table-value-fourth"><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
-                            <th className="table-value-fifth"><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-nomor"scope="row" key={item.fid}>{index + 1}</th>
+                            <th className="table-provinsi">{item.provinsi}</th>
+                            <th className="table-sembuh"><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-perawatan"><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-meninggal"><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
                         </tr>
                     )
                 })}
